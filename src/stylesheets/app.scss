@@ -1,9 +1,11 @@
+@import './variables';
+
 h1 {
   &.black {
-    color: black;
+    color: $myBlack;
   }
 
   &.red {
-    color: red;
+    color: $myRed;
   }
 }
