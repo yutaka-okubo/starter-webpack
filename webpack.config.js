@@ -24,5 +24,19 @@ module.exports = {
       new MiniCssExtractPlugin({
         filename: 'app.css'
       })
-  ]
+  ],
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    writeToDisk: (filepath) => {
+      return /dist\/.*/.test(filepath)
+    },
+    compress: true,
+    host: 'localhost',
+    port: 11111,
+    proxy: {
+      '/': 'http://localhost:1111'
+    },
+    open: true,
+    openPage: ''
+  }
 }

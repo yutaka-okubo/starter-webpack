@@ -6,7 +6,8 @@
   "author": "yutaka-okubo <y_okubo@ga-tech.co.jp>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "start": "webpack-dev-server --progress --colors"
   },
   "devDependencies": {
     "webpack": "^4.43.0",
